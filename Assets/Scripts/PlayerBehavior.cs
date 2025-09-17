@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     public int cherries = 0;
     private bool grounded;
     private bool stunned;
-    // hello world
  
     private AudioSource audioSource;
     private float rayDistance = 0.25f;
