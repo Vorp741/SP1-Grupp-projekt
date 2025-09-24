@@ -54,5 +54,4 @@ public class BoostBehavior : MonoBehaviour
         active = true;
         collider.gameObject.SetActive(active);
     }*/
-    // fågel
 }
