@@ -23,10 +23,11 @@ public class PlayerMovement : MonoBehaviour
     private GameObject cherryParticles, dustParticles;
     [SerializeField] private AudioClip cherrySfx, jumpSfx, boostSfx; //Jag vet hur arrays fungerar, valde att inte använda en.
     private int startingHealth = 3;
-    private int currentHealth = 0;
+    private int currentHealth = 1;
     public int cherries = 0;
     private bool grounded;
     private bool stunned;
+    private EnemyRespawn[] respawners;
  
     private AudioSource audioSource;
     private float rayDistance = 0.25f;
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         rgbd = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anims = GetComponent<Animator>();
+        respawners = Object.FindObjectsByType<EnemyRespawn>(FindObjectsSortMode.None); 
     }
 
     // Update is called once per frame
@@ -157,6 +159,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void respawn()
     {
+        foreach (EnemyRespawn r in respawners)
+    {
+        r.respawn();
+    }
         currentHealth = startingHealth;
         healthBar.value = currentHealth;
         transform.position = spawnPos.position;
