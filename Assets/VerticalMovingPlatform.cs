@@ -2,63 +2,38 @@ using UnityEngine;
 
 public class VerticalMovingPlatform : MonoBehaviour
 {
-    
-        [SerializeField] private Transform target1, target2;
-        [SerializeField] private float moveSpeed = 2.0f;
-        private bool isMoving = false;
+    [SerializeField] private Transform targetA;
+    [SerializeField] private float tweenSpeed;
+    private Transform currentTarget;
+    void Start()
+    {
+        currentTarget = targetA;
+    }
 
-        private Rigidbody2D rgbd;
-        private Transform currentTarget;
 
+    void FixedUpdate()
+    {
 
-
-        void Start()
+        if (transform.position == targetA.position)
         {
-            rgbd = GetComponent<Rigidbody2D>();
-            currentTarget = target1;
-
+            tweenSpeed = 0;
         }
-
-
-        //void FixedUpdate()
-        private void FixedUpdate()
+        transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, tweenSpeed * Time.deltaTime);
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && collision.transform.position.y > transform.position.y)
         {
-            if (isMoving)
-            {
-                if (transform.position == target1.position)
-                {
-                    currentTarget = target2;
-                }
-                /* if (transform.position == target2.position)
-                 {
-                     currentTarget = target1;
-                 }*/
-            }
-
-            transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, moveSpeed * Time.deltaTime);
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-
-            if (other.CompareTag("Player"))
-            {
-                isMoving = true;
-            }
-        }
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            if (other.gameObject.CompareTag("Player") && other.transform.position.y > transform.position.y)
-            {
-                other.transform.SetParent(transform);
-            }
-        }
-        private void OnCollisionExit2D(Collision2D other)
-        {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                other.transform.SetParent(null);
-            }
+            collision.transform.SetParent(transform);
         }
     }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
+    }
+
+}
 

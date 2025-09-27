@@ -33,6 +33,7 @@ public class MovingPlatform : MonoBehaviour
             collision.transform.SetParent(transform);
         }
     }
+    //ta en titt
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
