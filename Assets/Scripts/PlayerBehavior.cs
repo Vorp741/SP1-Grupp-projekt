@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontalValue;
-    private Rigidbody2D rgbd;
+    public Rigidbody2D rgbd;
     private SpriteRenderer spriteRenderer;
     private Animator anims;
     [SerializeField] private float moveSpeed = 325f;

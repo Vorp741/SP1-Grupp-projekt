@@ -4854,6 +4854,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 908619837}
     m_Modifications:
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
+      propertyPath: dog
+      value: 
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
+    - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
       objectReference: {fileID: 2005635456}
@@ -11219,6 +11223,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 908619837}
     m_Modifications:
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
+      propertyPath: dog
+      value: 
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
+    - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
       objectReference: {fileID: 2005635456}
@@ -11279,6 +11287,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908619837}
     m_Modifications:
+    - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
+      propertyPath: dog
+      value: 
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
@@ -17552,6 +17564,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 908619837}
     m_Modifications:
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
+      propertyPath: dog
+      value: 
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
+    - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
       objectReference: {fileID: 2005635456}
@@ -23226,6 +23242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 031a53b19d5e4114c94652996a161729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rgbd: {fileID: 0}
   moveSpeed: 325
   jumpHeight: 750
   LeftFoot: {fileID: 1890480929}
@@ -24463,6 +24480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908619837}
     m_Modifications:
+    - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
+      propertyPath: dog
+      value: 
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 

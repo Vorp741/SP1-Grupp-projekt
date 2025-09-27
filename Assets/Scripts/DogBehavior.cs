@@ -43,10 +43,12 @@ public class DogBehavior : MonoBehaviour
             collision.gameObject.GetComponent<PlayerMovement>().takeDamage(1);
             if (collision.transform.position.x > transform.position.x)
             {
+                collision.gameObject.GetComponent<PlayerMovement>().rgbd.linearVelocity = new Vector2(0, 0);
                 collision.gameObject.GetComponent<PlayerMovement>().takeKnockback(250f, 500f);
             }
             else
             {
+                collision.gameObject.GetComponent<PlayerMovement>().rgbd.linearVelocity = new Vector2(0, 0);
                 collision.gameObject.GetComponent<PlayerMovement>().takeKnockback(-250f, 500f);
             }
         }
@@ -66,7 +68,7 @@ public class DogBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetComponent<PlayerMovement>().isGrounded() == false && other.GetComponent<Rigidbody2D>().linearVelocityY < 0)
+        if (other.CompareTag("Player") && other.GetComponent<PlayerMovement>().isGrounded() == false && other.GetComponent<Rigidbody2D>().linearVelocityY < math.abs(1))
         {
             other.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(other.GetComponent<Rigidbody2D>().linearVelocityX, 0);
             other.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, bounceForce));
