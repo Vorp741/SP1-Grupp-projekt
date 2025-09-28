@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using Unity.Mathematics;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,17 +24,19 @@ public class PlayerMovement : MonoBehaviour
     private GameObject cherryParticles, dustParticles;
     [SerializeField] private AudioClip cherrySfx, jumpSfx, boostSfx; //Jag vet hur arrays fungerar, valde att inte använda en.
     private int startingHealth = 3;
-    public int currentHealth = 1;
+    public int currentHealth = 1; 
     public int cherries = 0;
     private bool grounded;
     private bool stunned;
     private EnemyRespawn[] respawners;
+    private int currentScene;
  
     private AudioSource audioSource;
     private float rayDistance = 0.25f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentScene =  SceneManager.GetActiveScene().buildIndex;
         cherryCount.text = "" + cherries;
         stunned = false;
         currentHealth = startingHealth;
@@ -141,9 +144,13 @@ public class PlayerMovement : MonoBehaviour
         currentHealth -= damageAmount;
         healthBar.value = currentHealth;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && currentScene != 4)
         {
             respawn();
+        }
+        if (currentHealth <= 0 && currentScene == 4)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
