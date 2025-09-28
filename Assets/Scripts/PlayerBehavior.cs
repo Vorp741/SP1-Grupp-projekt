@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private GameObject cherryParticles, dustParticles;
     [SerializeField] private AudioClip cherrySfx, jumpSfx, boostSfx; //Jag vet hur arrays fungerar, valde att inte använda en.
     private int startingHealth = 3;
-    private int currentHealth = 1;
+    public int currentHealth = 1;
     public int cherries = 0;
     private bool grounded;
     private bool stunned;
