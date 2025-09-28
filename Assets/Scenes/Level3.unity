@@ -578,7 +578,7 @@ PrefabInstance:
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: dog
       value: 
-      objectReference: {fileID: 1138703947}
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
@@ -9621,7 +9621,7 @@ PrefabInstance:
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: dog
       value: 
-      objectReference: {fileID: 1138703947}
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
@@ -14092,11 +14092,6 @@ Transform:
   - {fileID: 394447624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1138703947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 199719318610922185, guid: 44ff8e3e2f279454aa34de25f6f98545, type: 3}
-  m_PrefabInstance: {fileID: 1448273536}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1138703954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1235918304945306572, guid: 44ff8e3e2f279454aa34de25f6f98545, type: 3}
@@ -28491,7 +28486,7 @@ PrefabInstance:
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: dog
       value: 
-      objectReference: {fileID: 1138703947}
+      objectReference: {fileID: 2200299144750622135, guid: 052024e6e693158498870badfd9312a1, type: 3}
     - target: {fileID: 106879945330787123, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: playerBehavior
       value: 
