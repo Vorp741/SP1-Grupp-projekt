@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777590541769309182, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.57
+      value: 16.77
       objectReference: {fileID: 0}
     - target: {fileID: 3777590541769309182, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9632,7 +9632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777590541769309182, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.61
+      value: 17.810001
       objectReference: {fileID: 0}
     - target: {fileID: 3777590541769309182, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28497,7 +28497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777590541769309182, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.5
+      value: 16.7
       objectReference: {fileID: 0}
     - target: {fileID: 3777590541769309182, guid: bcbe3102744ce834f87dda1173df97d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41214,6 +41214,7 @@ MonoBehaviour:
   cherrySfx: {fileID: 8300000, guid: 6f91ba77e3bc2384fb76f42b92975b2a, type: 3}
   jumpSfx: {fileID: 8300000, guid: ee255d86c55b69744af669b5e6c3d638, type: 3}
   boostSfx: {fileID: 8300000, guid: 0468bd3d6d072b34580e48cd2c84d4fb, type: 3}
+  currentHealth: 1
   cherries: 0
 --- !u!61 &2005635457
 BoxCollider2D:
