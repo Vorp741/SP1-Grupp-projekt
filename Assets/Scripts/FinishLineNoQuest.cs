@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class FinishLineNoQuest : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
-    [SerializeField] private float delay = 5f;
+    [SerializeField] private float delay = 3f;
     [SerializeField] private bool isTriggered = false;
+    [SerializeField] private GameObject cameraChanger;
+   // public Behaviour cameraScriptToDisable;
+   // public Behaviour cameraScriptToEnable;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,9 +18,19 @@ public class FinishLineNoQuest : MonoBehaviour
         {
             isTriggered = true;
             StartCoroutine(LoadSceneAfterDelay());
+
+            cameraChanger.GetComponent<CameraAutoScroll>().enabled = false;
+            cameraChanger.GetComponent<CameraBehavior>().enabled = true;
+
+            //if (cameraScriptToDisable != null)
+            //      cameraScriptToDisable.enabled = false;
+            //
+            //   if (cameraScriptToEnable != null)
+            //  cameraScriptToEnable.enabled = true;
         }
 
- 
+
+
     }
     private IEnumerator LoadSceneAfterDelay()
     {
